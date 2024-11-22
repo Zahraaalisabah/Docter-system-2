@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Sidebar2 from './Sidebar2/Sidebar2';
+import HeaderBar from './components/HeaderBar';
+import Login from './Loggout/Login/Login';
+import PatientForm from './components/PatientForm';
+import Medications from './Shop/Medication';
+import PatientTable from './Patientlist/PatientTable';
+import Patientcard from './Patientcard/Patientcard';
+import Appointment from './Appointment/Appointment';
+import Book from './Book/Book';
+import Bookinglist from './Bookinglist/Bookinglist';
+import Welcom from './DrZain/Welcom';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <HeaderBar />
+        <Sidebar2 />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Welcom />} />
+            <Route path="/appointment" element={<Appointment />} />
+            <Route path="/patients" element={<PatientTable />} />
+            <Route path="/patient-info" element={<PatientForm />} />
+            <Route path="/patient-card" element={<Patientcard />} />
+            <Route path="/booking-list" element={<Bookinglist />} />
+            <Route path="/todo" element={<Book />} />
+            <Route path="/logout" element={<Login />} />
+
+
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 

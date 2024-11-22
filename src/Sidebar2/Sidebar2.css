@@ -1,0 +1,219 @@
+/* الكود الأساسي */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr: linear-gradient(to bottom, #d6e4f1, #dce4ec);
+  --bg: #3199bf; /* لون الخلفية عند التمرير */
+}
+
+body {
+  min-height: 100vh;
+  background: var(--clr);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70px; /* عرض Sidebar في الوضع المغلق */
+  height: 100vh;
+  background: #13315b;
+  transition: width 0.5s; /* التمدد/الانكماش عند الفتح والإغلاق */
+  overflow: hidden;
+  border-radius: 10px; /* بدون انحناء لتثبيته في الحافة */
+  z-index: 10; /* ضمان الظهور في المقدمة */
+  padding-top: 50px;
+}
+
+
+.sidebar.active {
+  width: 300px; /* عرض Sidebar عند الفتح */
+}
+
+.sidebar ul {
+  position: relative;
+  height: 100vh;
+}
+
+
+
+
+.sidebar ul li {
+  position: relative;
+  list-style: none;
+}
+
+.sidebar ul li.active {
+  background: var(--clr);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.sidebar ul li.active::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-bottom-right-radius: 20px;
+  background: transparent;
+  box-shadow: 5px 5px 0 5px var(--clr);
+}
+
+.sidebar ul li.active::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-top-right-radius: 20px;
+  background: transparent;
+  box-shadow: 5px -5px 0 5px var(--clr);
+}
+
+.sidebar ul li .logo {
+  margin-bottom: 50px;
+}
+
+.sidebar ul li .logo .icon img {
+  font-size: 2em;
+  color: var(--clr);
+}
+
+.sidebar ul li .logo .text {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--clr);
+}
+
+.sidebar ul li a {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.sidebar ul li .icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  height: 70px;
+  transition: 0.5s;
+  padding-left: 10px;
+}
+
+.sidebar ul li .icon img {
+  width: 40px; /* ضبط العرض */
+  height: 40px; /* ضبط الارتفاع */
+  z-index: 1; /* تأكد أن الصورة فوق الدائرة */
+}
+
+/* إضافة الدائرة البيضاء عند الضغط */
+.sidebar ul li.active .icon::before {
+  content: '';
+  position: absolute;
+  width: 75px; /* حجم الدائرة */
+  height: 75px;
+  background: linear-gradient(to bottom, #d6e4f1, #dce4ec);;
+  border-radius: 50%;
+  z-index: -1; /* خلف الصورة */
+}
+
+
+
+.sidebar ul li a .text {
+  position: relative;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #fff6f6;
+  padding-left: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.sidebar ul li.active a .text {
+  color: var(--bg);
+}
+
+.sidebar ul li:hover a .icon img,
+.sidebar ul li:hover a .text {
+  color: var(--bg);
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.imgBx {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1; /* تأكد أن الصورة تحت الدائرة */
+}
+
+.imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* أزرار التبديل */
+.menuToggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background: #333;
+  z-index: 1000; /* تأكد أن الدائرة فوق الصورة */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuToggle::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  transform: translateY(-7px);
+  transition: 0.5s;
+}
+
+.menuToggle::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  transform: translateY(7px);
+  transition: 0.5s;
+}
+
+.menuToggle.active::before {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.menuToggle.active::after {
+  transform: translateY(0px) rotate(-45deg);
+}

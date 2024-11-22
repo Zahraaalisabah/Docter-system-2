@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #d6e4f1, #dce4ec);
+  margin: 0;
+  padding: 0;
+}
+
+.unique-patient-card-container {
+    background-color: rgba(183, 202, 219, 0.9);
+    width: 900px;
+    height: 80vh;
+    max-width: 800px;
+    margin: 50px auto; /* لإبقاء البطاقة في المركز */
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 40px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s; /* تأثير التحريك */
+    transform: translateX(10px); /* تحريك البطاقة قليلاً إلى اليمين */
+    margin-left: 300px;
+}
+
+.unique-patient-card-container:hover {
+    transform: translateX(10px) scale(1.02); /* تكبير وتحريك عند التمرير */
+}
+
+
+.unique-patient-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.unique-patient-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* ظل للصورة */
+}
+
+.unique-patient-info h2 {
+  margin: 0;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.unique-previous-operations {
+  font-weight: bold;
+}
+
+.unique-no {
+  color: red;
+}
+
+.unique-patient-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.unique-detail-box {
+  background-color: #d0e1e7;
+  padding: 15px;
+  border-radius: 15px;
+  transition: background-color 0.3s, transform 0.3s; /* تأثير الانتقال */
+}
+
+.unique-detail-box:hover {
+  background-color: #c0d3e6; /* لون الخلفية عند التمرير */
+  transform: translateY(-5px); /* رفع عند التمرير */
+}
+
+.unique-detail-box p {
+  font-size: 15px; /* الحجم الأساسي لجميع الفقرات داخل detail-box */
+  font-weight: bold;
+  color: rgb(166, 37, 37);
+  margin-bottom: 10px;
+}
+
+.unique-highlighted-text {
+  color: red;
+  font-weight: bold; /* اجعل النص بارزاً */
+}
+
+.unique-medication {
+  display: flex;
+  align-items: center;
+}
+
+.unique-medication-img {
+  margin-right: 10px;
+}
+
+.unique-medication p {
+  margin-left: 10px;
+}

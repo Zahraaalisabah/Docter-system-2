@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #d6e4f1, #dce4ec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.bookinglist-container {
+  background-color: rgba(183, 202, 219, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 900px;
+  height: 80vh;
+  margin-left: 300px;
+  animation: fadeIn 0.5s ease-out; /* تأثير الظهور التدريجي */
+}
+
+/* تأثير الظهور التدريجي */
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* الشفافية 0 في البداية */
+      transform: translateY(20px); /* التحريك لأعلى */
+  }
+  to {
+      opacity: 1; /* الشفافية 1 في النهاية */
+      transform: translateY(0); /* العودة إلى الموقع الأصلي */
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4d7fa3;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 50px;
+  padding-top: 10px;
+  transition: transform 0.3s ease; /* تأثير التحريك */
+}
+
+.title:hover {
+  transform: scale(1.05); /* تكبير العنوان عند التمرير */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e1eefb;
+  transition: background-color 0.3s ease; /* تأثير تغيير لون الخلفية */
+}
+
+th {
+  color: #4d7fa3;
+  font-size: 1rem;
+}
+
+td {
+  color: #5a6f8c;
+  font-size: 1rem;
+}
+
+tr:hover {
+  background: #e1eefb; /* تغيير لون الصف عند التمرير */
+  transform: scale(1.02); /* تكبير الصف قليلاً عند التمرير */
+  transition: transform 0.3s ease; /* تأثير سلس لتكبير الصف */
+}
+
+.booking-code {
+  font-weight: bold;
+  color: #3a5f77;
+  transition: color 0.3s ease; /* تأثير تغيير اللون */
+}
+
+.booking-code:hover {
+  color: #2a3f57; /* لون أغمق عند التمرير */
+}
+
+.booking-date,
+.booking-name,
+.booking-time {
+  color: #5a6f8c;
+  transition: color 0.3s ease; /* تأثير تغيير اللون */
+}
+
+.booking-date:hover,
+.booking-name:hover,
+.booking-time:hover {
+  color: #3a5f77; /* لون أغمق عند التمرير */
+}

@@ -1,0 +1,58 @@
+.input-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between; /* تغيير المحاذاة */
+    align-items: center; /* محاذاة العناصر عمودياً */
+    border-bottom: 2px solid rgba(30, 93, 144, 0.5); /* حدود مائية بلون أزرق فاتح */
+    background-color: #cad4e3; /* لون الخلفية (اختياري) */
+    z-index: 10; /* التأكد من ظهور الشريط فوق العناصر الأخرى */
+}
+.profile-icon {
+    margin-left: 10px; /* مسافة من الجهة اليسرى */
+}
+
+.profile-image {
+    width: 40px; /* عرض الصورة */
+    height: 40px; /* ارتفاع الصورة */
+    border-radius: 50%; /* جعل الصورة دائرية */
+    object-fit: cover; /* تغطية الصورة بشكل جيد */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الصورة */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.greeting {
+    font-size: 16px;
+    color: #000000; /* لون الخط */
+    margin-left: auto; /* جعلها في أقصى اليمين */
+    margin-right: 10px; /* إضافة مساحة من اليمين */
+}
+
+.input-container .icon-search {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000000;
+    margin-left: 26rem; /* تكييف المسافة ليتناسب مع التصميم */
+}
+
+.input-field {
+    width: 700px;
+    padding: 8px 35px;
+    border-radius: 50px;
+    border: 1px solid #1E5D90; /* حدود شريط البحث */
+    font-size: 16px; /* إضافة حجم الخط ليكون متناسقاً */
+    color: #000000; /* لون النص بالأسود */
+    margin-left: 25rem;
+}
+
+.input-field::placeholder {
+    color: #000000; /* لون placeholder */
+}
+

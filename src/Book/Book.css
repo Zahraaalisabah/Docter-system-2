@@ -1,0 +1,546 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: rgba(183, 202, 219, 0.9);
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    margin-left: 100px;
+    padding-top: 260px;
+  }
+
+  
+  
+
+  
+  .greeting-container {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
+  
+  .date {
+    font-size: 1.2rem;
+    text-align: right;
+    color: #555;
+    margin-bottom: 15px;
+    padding-top: 85px;
+  }
+  
+  .greeting-card {
+    display: flex;
+    align-items: center;
+    background-color: #d0e1e7;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 100px; /* قم بتغيير هذا الرقم حسب الحاجة */
+
+  }
+  
+  .doctor-image img {
+    width: 80px;
+    border-radius: 50%;
+  }
+  
+  .greeting-text h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #7095de;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+  
+  .iconcircul {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .phone-icon {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #82a5ff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .cards-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  
+  
+  .card {
+    width: 200px !important;
+    height: 100px !important;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white; /* اللون الافتراضي للنصوص */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    padding: 10px;
+    
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+  border-color: #3b82f6;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+.icon {
+    font-size: 24px; /* حجم الأيقونة */
+    margin-right: 5px; 
+    color: #FFD700; /* لون الأيقونة */
+}
+
+.count {
+    font-size: 20px !important; /* استخدام !important لضمان تطبيق هذا الحجم */
+    font-weight: bold;
+    color: #FF4500; /* لون النص للعدد */
+    padding-right: 5px !important;
+
+}
+
+.title {
+    font-size: 15px !important; /* استخدام !important هنا أيضاً */
+    color: #FFFFFF !important; /* لون النص للعناوين */
+    margin-bottom: 10px !important;
+}
+
+
+
+
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+
+
+  
+
+  .main-content {
+    display: flex; /* يسمح بعرض الكروت بجانب بعضها */
+    justify-content: space-between; /* يتيح توزيع الكروت بالتساوي */
+    gap: 20px; /* إضافة مسافة بين الكروت */
+    width: 100%;
+    max-width: 800px;
+    
+}
+
+
+.appointments-section,
+.patient-details-section,
+.book-card {
+    flex: 1;
+    max-width: 300px;
+    background-color: rgba(163, 197, 227, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+  
+  .appointments-section:hover,
+  .patient-details-section:hover {
+    transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+  border-color: #3b82f6;
+  }
+  
+  h2 {
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      margin-bottom: 10px;
+      color: #333;
+      margin-bottom: 20px;
+  }
+  
+  .see-all {
+      font-size: 0.9rem;
+      color: #4e9be4;
+      text-decoration: none;
+  }
+  
+  .appointment-item, .patient-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .appointment-details, .patient-info {
+    flex-grow: 1;
+  }
+  
+  .name {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .type, .diagnosis, .patient-meta p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .appointment-status {
+    display: flex;
+    align-items: center;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    color: #fff;
+  }
+  
+  .ongoing {
+    background-color: #d0e7ff;
+    color: #4e9be4;
+  }
+  
+  .time {
+    background-color: #d0e7ff;
+    color: #4e9be4;
+  }
+  
+  .patient-meta {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #777;
+  }
+  
+  .symptoms {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .symptom {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    color: #333;
+  }
+  
+  .yellow {
+    background-color: #4e9be4;
+  }
+  
+  .green {
+    background-color: #4e9be4;
+  }
+  
+  .last-prescription {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+.task-container {
+    max-width: 800px; /* يمكنك تعديل هذا العرض حسب الحاجة */
+    background: #121829; /* الخلفية */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* ظل */
+    border-radius: 10px; /* زوايا دائرية */
+    text-align: center; /* محاذاة النص */
+    overflow-y: auto; /* للسماح بالتمرير */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثيرات التحويل */
+    margin-top: 30px ;
+    width: 900px ;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.task-status .task-count {
+  color: #82a5ff; /* اللون الذي تريده */
+  font-weight: bold; /* لجعل النص أكثر وضوحًا */
+}
+
+
+.task-container:hover {
+    transform: translateY(-10px); /* تحريك الكارت للأعلى عند التحويم */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* ظل أعمق عند التحويم */
+}
+
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-header h1 {
+    font-size: 18px;
+    color: #fff; /* لون العنوان */
+}
+
+.task-progress-bar {
+    background: #82a5ff;
+    width: 70px;
+    height: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    position: relative;
+    margin-bottom: 10px;
+
+    
+}
+
+.task-progress {
+    background: #82a5ff;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.task-input-area {
+    display: flex;
+    margin-bottom: 20px;
+    
+}
+
+.task-input-area input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: white;
+}
+
+.task-input-area button {
+    width: 20%;
+    background: #82a5ff;
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0; /* إزالة الحشو الافتراضي */
+    
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a2133;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.task-item span {
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff; /* لون النص */
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+    color: #82a5ff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.task-completed span {
+    text-decoration: line-through;
+    color: #7a7a7a;
+}
+
+/* أنماط كارت المرضى */
+.card-analysis {
+  width: 250px;
+  height: 250px;
+  background-color: rgba(163, 197, 227, 0.9);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-analysis:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+  border-color: #3b82f6;
+}
+
+.day-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #000000;
+}
+
+.arrows {
+  position: absolute;
+  top: 10px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.arrows:hover {
+  transform: scale(1.2);
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.pie-chart {
+  width: 100px ;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  background: conic-gradient(
+    #3b82f6 0% 55%, 
+    #ef4444 55% 100%
+  );
+  display: inline-block; /* هذا سيساعد في الحفاظ على الشكل */
+}
+
+
+.pie-chart::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.card-analysis:hover .pie-chart {
+  transform: scale(1.05);
+}
+
+
+
+.inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: bold;
+  color: #333;
+  z-index: 2;
+}
+
+.details {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.details div {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.details div span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.old {
+  background-color: #3b82f6;
+}
+
+.new {
+  background-color: #ef4444;
+}
+
+.details div p {
+  margin: 0;
+  flex: 1;
+  color: black;
+}
+

@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #d6e4f1, #dce4ec) !important;
+}
+
+.appointment-scheduler {
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.scheduler-content {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.calendar-wrapper {
+    background-color: rgba(183, 202, 219, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 90vw; /* تقليل العرض ليناسب الشاشات الصغيرة */
+    max-width: 1200px; /* الحد الأقصى للعرض لتفادي التمدد الزائد */
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #336699; 
+    color: white;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    font-size: 1rem;
+}
+
+.weekdays-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    background: #dfe6e9;
+    padding: 8px;
+}
+
+
+.calendar-day {
+    background: #fff;
+    padding: 15px;
+    min-height: 120px;
+    position: relative; /* لجعل العناصر الفرعية ذات الموقف المطلق تتناسب مع هذا العنصر */
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* تنظيم العناصر داخل الخلية بشكل عمودي */
+    align-items: flex-start; /* محاذاة العناصر إلى اليسار */
+}
+
+
+.prev-month-btn, .next-month-btn {
+    background-color: #3498db; /* لون الخلفية الأساسي */
+    color: white; /* لون النص */
+    border: none; /* إزالة الحدود */
+    padding: 10px; /* الحفاظ على الـ padding */
+    width: 120px; /* تعيين عرض ثابت */
+    border-radius: 50px; /* زوايا دائرية */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+    transition: background-color 0.3s; /* تأثير الانتقال */
+}
+
+.prev-month-btn:hover, .next-month-btn:hover {
+    background-color: #0f4d76; /* لون الخلفية عند التمرير */
+}
+
+.save-note-btn {
+    background-color: #28a745; /* لون الخلفية لأزرار الحفظ */
+    color: white; /* لون النص */
+    border: none; /* إزالة الحدود */
+    padding: 10px 20px; /* padding لتحسين المظهر */
+    border-radius: 5px; /* زوايا دائرية */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+    transition: background-color 0.3s; /* تأثير الانتقال */
+}
+
+.save-note-btn:hover {
+    background-color: #218838; /* لون الخلفية عند التمرير */
+}
+
+.cancel-note-btn {
+    background-color: #dc3545; /* لون الخلفية لأزرار الإلغاء */
+    color: white; /* لون النص */
+    border: none; /* إزالة الحدود */
+    padding: 10px 20px; /* padding لتحسين المظهر */
+    border-radius: 5px; /* زوايا دائرية */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+    transition: background-color 0.3s; /* تأثير الانتقال */
+}
+
+.cancel-note-btn:hover {
+    background-color: #c82333; /* لون الخلفية عند التمرير */
+}
+
+.delete-note-btn {
+    background-color: #dc3545; /* لون الخلفية لأزرار الحذف */
+    color: white; /* لون النص */
+    border: none; /* إزالة الحدود */
+    padding: 10px 20px; /* padding لتحسين المظهر */
+    border-radius: 5px; /* زوايا دائرية */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+    transition: background-color 0.3s; /* تأثير الانتقال */
+}
+
+.delete-note-btn:hover {
+    background-color: #c82333; /* لون الخلفية عند التمرير */
+}
+
+
+.note-indicator {
+    background: #3498db; 
+    color: white; 
+    padding: 5px; 
+    border-radius: 5px; 
+    margin-top: 5px; 
+    word-wrap: break-word; 
+}
+
+.note-modal {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    z-index: 1000;
+    max-width: 300px;
+    text-align: center;
+}
+
+.note-modal textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.note-modal button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.note-modal button:hover {
+    opacity: 0.9;
+}
+
+.prev-month-btn {
+    margin-right: 20px;
+}
+
+.next-month-btn {
+    margin-left: 20px;
+}
